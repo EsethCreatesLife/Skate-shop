@@ -1,0 +1,204 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Radio+Canada:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap");
+:root {
+  --light-goldenrod-yellow: #f2f6d0ff;
+  --honeydew: #d0e1d4ff;
+  --bone: #d9d2b6ff;
+  --desert-sand: #e4be9eff;
+  --old-lavender: #71697aff;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: var(--light-goldenrod-yellow);
+  font-family: "Poppins", sans-serif;
+}
+
+button {
+  margin: 2em 0;
+  padding: 1.2em 3.7em;
+  background-color: var(--bone);
+  border: none;
+  border-radius: 5em;
+  font-size: 0.9em;
+  font-weight: bold;
+  font-family: "Nunito", sans-serif;
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--honeydew);
+  }
+}
+
+// Navigation Bar
+.navbar {
+  background-color: var(--bone);
+  padding: 0.8em 2.5em;
+  height: auto;
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .logo {
+    display: block;
+    font-size: 1.8em;
+    letter-spacing: 0.2em;
+    font-weight: bold;
+    color: #6b705c;
+    text-transform: uppercase;
+  }
+
+  li {
+    margin: 0;
+    padding: 1em 1.5em;
+    display: inline-block;
+    list-style-type: none;
+
+    a {
+      padding: 0.5em 1.5em;
+      text-decoration: none;
+      color: var(--old-lavender);
+      font-weight: bold;
+      border: 1px solid inherit;
+      border-radius: 5em;
+      background-color: #cfb9a5;
+      &:hover {
+        font-weight: bolder;
+        background-color: var(--honeydew);
+      }
+    }
+  }
+}
+
+// Content
+.content-section {
+  width: 100%;
+  height: auto;
+  margin-top: 2.5em;
+  margin-bottom: 2.5em;
+  padding: 0 5em;
+  box-sizing: border-box;
+}
+
+.main-content {
+  display: flex;
+  align-items: center;
+}
+.left-col {
+  line-height: 1.5;
+  letter-spacing: 0.1em;
+  text-align: left;
+  margin-right: 30px;
+  width: 80%;
+  h1 {
+    text-align: left;
+    font-size: 6em;
+  }
+}
+.right-col {
+  align-self: center;
+  img {
+    cursor: pointer;
+    width: 17em;
+    height: auto;
+    display: inline-block;
+    margin: 2em 1.5em 2em 1.5em;
+    border-radius: 2em;
+  }
+}
+
+// Footer
+.footer-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 8.5vh;
+  color: #edede9;
+  text-align: center;
+  background-color: var(--old-lavender);
+}
+
+// chat-btn
+
+.chat-btns {
+  display: flex;
+  flex-direction: column;
+
+  position: fixed;
+  right: 50px;
+  bottom: 250px;
+  img {
+    margin: 0.5em 0;
+    width: 35px;
+    height: 35px;
+  }
+}
+
+// Modal design
+.active {
+  filter: blur(10px);
+  cursor: default;
+}
+
+.popup {
+  width: 30em;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  .container-pop {
+    display: flex;
+  }
+  .btn-carousel {
+    margin: 0 0.9em;
+    align-self: center;
+    width: 1.8em;
+  }
+
+  .deck-image {
+    width: 100%;
+    border-radius: 5em;
+    box-shadow: 5px 5px 5px var(--desert-sand);
+  }
+}
+.hide {
+  visibility: hidden;
+}
+
+// Order button
+
+.order-modal {
+  background-color: white;
+  width: 500px;
+  height: 25vh;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 2.5em;
+  text-align: center;
+  box-shadow: 5px 5px 5px var(--desert-sand);
+
+  p {
+    font-size: 1.6em;
+    font-weight: bold;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  img {
+    position: relative;
+    top: 2.9rem;
+    left: 40%;
+    cursor: pointer;
+    // transform: translate(500px, 113px);
+  }
+}
